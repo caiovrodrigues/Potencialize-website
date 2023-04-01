@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+html{scroll-behavior: smooth;}
+body{background-color: #071320; overflow-x: hidden;}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 7%;
+    background-color: #222831; 
+}
+.logo-area{
+    font-weight: 400;
+    font-size:1.75rem;
+    color: white;
+    letter-spacing: 2px;
+}
+.logo-area span{
+    font-family: 'Orbitron', sans-serif;
+}
+.logo-area i{
+    color:#eb4a4a;
+}
+nav ul{
+    display: flex;
+    gap: 7px;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-transform: uppercase;
+    color: aliceblue;
+    padding: 20px;
+    font-size: .9rem;
+}
+nav ul li a:hover{
+    color: #eb4a4a;
+}
+nav ul li a.active{
+    color: #eb4a4a;
+}
+
+.menu-hamburger{
+    display: none;
+    cursor: pointer;
+}
+.row1, .row2, .row3{
+    width: 35px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px;
+    transition: .1s;
+}
+
+.banner{
+    background-image: url("../banner-back.jpg");
+    background-position: bottom;
+    background-size: cover;
+    padding: 150px 7%;
+    background-color: #eb4a4a;
+    background-blend-mode: multiply;
+    color: white;
+}
+.text{
+    max-width: 500px;
+}
+.text span{
+    color: #dbbc57;
+}
+.text h4{
+    font-size: 3rem;
+    line-height: 52px;
+    margin-bottom: 18px;
+}
+.text p{
+    font-size: 1.08rem;
+}
+.action{
+    background-color: #1bd741;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 50px;
+    margin: 10px 0 0 0;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #222831;
+}
+.btn i{
+    color: white;
+    font-size: 2rem;
+}
+
+/************************ SERVICES **************************/
+
+.services{
+    background-color: aliceblue;
+    padding: 50px 7%;
+}
+.title{
+    margin: auto;
+    padding: 20px 0 25px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    width: max-content;
+    font-size: 1.1rem;
+}
+.title::after{
+    content: '';
+    margin: 7px auto;
+    width: 60%;
+    height: 2px;
+    background-color: #eb4a4a;
+    display: block;
+}
+.white{color: white;}
+.services .boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.services .box{
+    padding: 30px 15px;
+    border: 1px solid #eb4a4a;
+    transition: .1s ease;
+    cursor: pointer;
+}
+.services .box:hover{
+    background-color: #dbbc57;
+    color: #eb4a4a;
+}
+.services .box:hover .box-title{
+    color: #eb4a4a;
+}
+
+.box-title{
+    text-align: center;
+    color: #dbbc57;
+    font-size: 1.4rem;
+}
+.box-title i{
+    font-size: 2.1rem;
+}
+
+.box span{
+    display: inline-block;
+    font-size: .85rem;
+    text-align: center;
+    margin: 15px 0;
+    color: black;
+}
+
+/************************ ABOUT US **************************/
+.about-us{
+    background-color: #071320;
+    padding: 50px 14%;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    color: white;
+    gap: 10px;
+}
+.content-left{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+.content-left p span{
+    font-family: 'Orbitron';
+    color: #eb4a4a;
+}
+.content-left .tit{
+    font-family: 'Orbitron';
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.content-left p{
+    text-align: justify;
+    font-weight: 300;
+}
+.list{
+    margin-top: 10px;
+    color: #dbbc57;
+}
+.list p{
+    text-align: start;
+    line-height: 31px;
+}
+.content-right{
+    width: 100%;
+    height: 100%;
+}
+.content-right img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+/********************* REVIEW **************************/
+.review{
+    background: linear-gradient(to bottom, aliceblue 85%, #071320 15%);
+    padding: 50px 7%;
+}
+
+.review .boxes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 40px;
+}
+.review .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: all .4s;
+    background-color: #dbbc57;
+    border: 1px solid #eb4a4a;
+    padding: 20px 10px;
+}
+.review .box .fa-sharp{
+    position: absolute;
+    top: 2rem;
+    left: 1.3rem;
+    color: #eb4a4a6b;
+    font-size: 3.4rem;
+}
+.review .photo-area{
+    width: 80px;
+}
+
+.review .photo-area img{
+    width: inherit;
+    border-radius: 100px;
+}
+.review p{
+    font-weight: 500;
+}
+.review .description{
+    font-weight: 300;
+    font-size: .85rem;
+    line-height: 23px;
+    text-align: center;
+}
+.stars{
+    background-color: #eb4a4a;
+    padding: 0px 15px;
+    border-radius: 100px;
+    margin-top: 10px;
+}
+.review .stars i{
+    color: #f6e51c;
+    font-size: .75rem;
+}
+
+.review .box:hover{
+    transform: translateY(-10px);
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+/******************************* CONTACT ***********************************/
+
+.contact{
+    padding: 50px 14%;
+    background-color: #071320;
+}
+
+.form{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 40px;
+    background-color: #222831;
+}
+.form .content-left{
+    display: flex;
+}
+.content-left .title-form{
+    text-align: center;
+    color: #dbbc57;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.content-left .description{
+    margin-top:12px;
+    color: #a0a0a0;
+    font-size: .9rem;
+}
+.content-left .ig{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+}
+.ig img{
+    width: 30px;
+    border-radius: 5px;
+}
+.ig a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+    font-weight: 200;
+    font-size: .9rem;
+}
+.social-medias{
+    margin-top:2rem;
+}
+.area{
+    display: flex;
+    align-items: center;
+    gap:8px;
+    margin-bottom: 20px;
+    color: #cfcfcf;
+}
+.area i{
+    color: #dbbc57;
+    font-size: 1.2rem;
+}
+.contact .content-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.content-right .input-name, .input-email{
+    display: flex;
+    align-items: center;
+    padding: 2px 10px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    background-color: #e9e9e9;
+    border: 1px solid #e9e9e9;
+}
+input{
+    width: 100%;
+    outline: 0;
+    border: none;
+    height: 30px;
+    background-color: #e9e9e9;
+    margin-left: 8px;
+}
+textarea{
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    resize: none;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+}
+.message-area{
+    background-color: #e9e9e9;
+    border-radius: 7px;
+    height: 100px;
+}
+.formjs{
+    border: 1px solid #eb4a4a;
+}
+.content-right i{
+    font-size: 1.1rem;
+    color: rgb(175, 175, 175);
+}
+.content-right p{
+    margin-bottom: 2px;
+    font-size: .9rem;
+    color: #071320;
+}
+
+.submit{
+    cursor: pointer;
+    width: 30%;
+    margin: 15px auto 0;
+    background-color: #eb4a4a;
+    color: white;
+    letter-spacing: 1px;
+    font-size: .8rem;
+    transition: .3s;
+}
+.submit:hover{
+    background-color: #1bd741;
+    color: #071320;
+}
+
+
+
+/***************** MEDIAS QUERIES - RESPONSIVE ********************/
+
+@media (max-width: 1024px){
+    header{
+        padding: 15px 5%;
+    }
+
+    .banner{
+        padding: 180px 5%;
+    }
+
+    .services{
+        padding: 50px 5%;
+    }
+
+    .about-us{
+        padding: 50px 8%;
+    }
+}
+
+@media (max-width: 940px){
+    .menu-hamburger{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 72px;
+        right: 0%;
+        background-color: #071320e7;
+        box-shadow: 0 8px 10px black;
+        transition: .4s;
+    }
+    nav ul{
+        display: block;
+    }
+    nav ul li a{
+        display: inline-block;
+        width: 100%;
+        text-transform: uppercase;
+        color: aliceblue;
+        padding: 1.3rem 7rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    nav ul li a:hover{
+        background-color: rgba(255, 255, 255, 0.945);
+    }
+    nav.toggle{
+        right: -200%;
+    }
+   
+    .one{
+        transform: translateY(3px) rotate(-45deg);
+    }
+    .two{
+        display: none;
+    }
+    .three{
+        transform: translateY(-7px) rotate(45deg);
+    }
+    .grid .content-left{
+        grid-row: 2/3;
+    }
+    .about-us{
+        padding: 50px 14%;
+    }
+    .contact .content-right{
+        justify-items: center;
+    }
+}
+
+@media (max-width: 548px){
+    .about-us{
+        padding: 50px 7%;
+    }
+    .contact{
+        padding: 50px 8%;
+    }
+    .form{
+        padding: 20px;
+    }
+    .contact .content-right{
+        padding: 25px 10px;
+    }
+    .content-left .description{
+        text-align: center;
+    }
+}
+
+@media (max-width: 478px){
+    .logo-area{
+        font-size:1.65rem;
+        color: white;
+        letter-spacing: 2px;
+    }
+    .banner {
+        padding: 150px 5%;
+    }
+    .text h4{
+        font-size: 2.3rem;
+        line-height: 47px;
+        margin-bottom: 18px;
+    }
+    .text p{
+        font-size: 1rem;
+    }
+    .area{
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 10px;
+    }
+    .ig{
+        margin-top: 15px;
+    }
+    .content-left{
+        padding: 0;
+    }
+    
+    .area span, .ig a{
+        font-size: .9rem;
+    }
+}
