@@ -42,9 +42,3 @@ btn.addEventListener('click', () => {
     document.querySelector('.row3').classList.toggle('three');
 
 });
-
-let a = ['jaguar', 'eagle'];
-
-a.reverse();
-
-console.log(a.pop());
