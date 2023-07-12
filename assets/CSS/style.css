@@ -9,11 +9,15 @@
 html{scroll-behavior: smooth;}
 body{background-color: #071320; overflow-x: hidden;}
 header{
+    background-color: #222831; 
+}
+.header-area{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 7%;
-    background-color: #222831; 
+    max-width: 1360px;
+    padding: 12px 0;
+    margin: auto;
 }
 .logo-area{
     font-weight: 400;
@@ -63,10 +67,18 @@ nav ul li a.active{
     background-image: url("../banner-back.jpg");
     background-position: bottom;
     background-size: cover;
-    padding: 150px 7%;
+    padding: 150px 0;
     background-color: #eb4a4a;
     background-blend-mode: multiply;
     color: white;
+}
+.max-width-area{
+    max-width: 1360px;
+    margin: auto;
+}
+.max-width-area-two{
+    max-width: 1140px;
+    margin: auto;
 }
 .text{
     max-width: 500px;
@@ -104,7 +116,7 @@ nav ul li a.active{
 
 .services{
     background-color: aliceblue;
-    padding: 50px 7%;
+    padding: 50px 0;
 }
 .title{
     margin: auto;
@@ -154,7 +166,7 @@ nav ul li a.active{
 
 .box span{
     display: inline-block;
-    font-size: .85rem;
+    font-size: 1rem;
     text-align: center;
     margin: 15px 0;
     color: black;
@@ -163,7 +175,7 @@ nav ul li a.active{
 /************************ ABOUT US **************************/
 .about-us{
     background-color: #071320;
-    padding: 50px 14%;
+    padding: 50px 0;
 }
 .grid{
     display: grid;
@@ -174,7 +186,6 @@ nav ul li a.active{
 .content-left{
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
 }
 .content-left p span{
     font-family: 'Orbitron';
@@ -199,6 +210,8 @@ nav ul li a.active{
     line-height: 31px;
 }
 .content-right{
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
 }
@@ -211,12 +224,12 @@ nav ul li a.active{
 /********************* REVIEW **************************/
 .review{
     background: linear-gradient(to bottom, aliceblue 85%, #071320 15%);
-    padding: 50px 7%;
+    padding: 50px 0;
 }
 
 .review .boxes{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
 }
 .review .box{
@@ -273,7 +286,7 @@ nav ul li a.active{
 /******************************* CONTACT ***********************************/
 
 .contact{
-    padding: 50px 14%;
+    padding: 20px 0 50px 0;
     background-color: #071320;
 }
 
@@ -331,6 +344,9 @@ nav ul li a.active{
 .area i{
     color: #dbbc57;
     font-size: 1.2rem;
+}
+.area span{
+    word-break: break-all;
 }
 .contact .content-right{
     display: flex;
@@ -399,25 +415,121 @@ textarea{
     color: #071320;
 }
 
+/* FOOTER */
+
+footer{
+    background-color: #222831;
+    padding: 50px 0;
+}
+
+.flex-footers{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 0;
+}
+
+.footer h2{
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 300;
+}
+
+.esq{
+    gap: 5px;
+}
+.esq a{
+    color: white;
+    font-weight: 200;
+}
+.esq a:hover{
+    color:#dbbc57;
+}
+.cent{
+    flex:1.5;
+}
+
+.cent input{
+    width: 90%;
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: 40px;
+    font-size: 1rem;
+}
+
+.cent button{
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px 30px;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    margin-top: 15px;
+    border: 1px solid white;
+    color: white;
+    transition: 0.2s;
+}
+
+.cent button:hover{
+    transform: scale(1.04);
+}
+
+.dir{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: 200;
+}
+
+.footer-items i{
+    margin-right: 5px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.footer-items i:hover{
+    color: #dbbc57;
+}
 
 
 /***************** MEDIAS QUERIES - RESPONSIVE ********************/
 
-@media (max-width: 1024px){
-    header{
-        padding: 15px 5%;
+@media (max-width: 1360px){
+    .header-area{
+        padding: 12px 30px;
     }
-
     .banner{
-        padding: 180px 5%;
+        padding: 150px 30px;
     }
+}
 
+@media (max-width: 1160px){
     .services{
-        padding: 50px 5%;
+        padding: 50px 30px;
     }
-
     .about-us{
-        padding: 50px 8%;
+        padding: 50px 30px;
+    }
+    .review{
+        padding: 50px 30px;
+    }
+    .contact{
+        padding: 20px 30px 50px 30px;
+    }
+}
+
+@media (max-width: 1024px){
+    .review .boxes{
+        gap: 20px;
     }
 }
 
@@ -464,30 +576,30 @@ textarea{
     .grid .content-left{
         grid-row: 2/3;
     }
-    .about-us{
-        padding: 50px 14%;
+    .content-right img {
+        width: 70%;
     }
-    .contact .content-right{
-        justify-items: center;
+    .form{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
     }
 }
 
 @media (max-width: 548px){
-    .about-us{
-        padding: 50px 7%;
-    }
-    .contact{
-        padding: 50px 8%;
-    }
-    .form{
-        padding: 20px;
-    }
     .contact .content-right{
         padding: 25px 10px;
     }
     .content-left .description{
         text-align: center;
     }
+    .flex-footers{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .content-right img{
+        width: 90%;
+    } 
 }
 
 @media (max-width: 478px){
@@ -496,8 +608,23 @@ textarea{
         color: white;
         letter-spacing: 2px;
     }
+    .header-area{
+        padding: 12px 20px;
+    }
     .banner {
-        padding: 150px 5%;
+        padding: 125px 20px;
+    }
+    .services{
+        padding: 50px 20px;
+    }
+    .about-us{
+        padding: 50px 20px;
+    }
+    .review{
+        padding: 50px 20px;
+    }
+    .contact{
+        padding: 20px 20px 50px 20px;
     }
     .text h4{
         font-size: 2.3rem;
@@ -519,7 +646,37 @@ textarea{
         padding: 0;
     }
     
+    .content-right img{
+        width: 100%;
+    }   
+
     .area span, .ig a{
         font-size: .9rem;
+    }
+}
+
+@media (max-width: 400px){
+    .header-area{
+        padding: 12px 10px;
+    }
+    .logo-area{
+        font-size: 1.6rem;
+    }
+    .banner{
+        padding: 125px 10px;
+    }
+    .row1, .row2, .row3{
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px;
+        transition: .1s;
+    }
+    .form{
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        padding: 20px 10px;
+    }
+    .contact{
+        padding: 20px 10px 50px 10px;
     }
 }

@@ -42,3 +42,19 @@ btn.addEventListener('click', () => {
     document.querySelector('.row3').classList.toggle('three');
 
 });
+
+let navLinks = document.querySelectorAll('ul li');
+
+navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+        document.querySelector('nav').classList.toggle('toggle');
+
+        document.querySelector('.row1').classList.toggle('one');
+        document.querySelector('.row2').classList.toggle('two');
+        document.querySelector('.row3').classList.toggle('three');
+    });
+});
+
+function assinar(){
+    window.location.reload(true);
+}
